@@ -60,7 +60,7 @@
   <!-- /grid-a -->
 </div>
 
-<div data-role="tabs">
+<div data-role="tabs" id="tabs">
   <div data-role="navbar">
     <ul>
       <li><a href="#one" data-theme="a" data-ajax="false" class="ui-btn-active">项目介绍</a></li>
@@ -251,6 +251,17 @@
 </body>
 <!--<script src="owl.carousel.js"></script>-->
 <script>
+
+    $(document).on("pageinit",function(){
+//        alert("pageinit event fired!");
+        $("#tabs").tabs();
+    });
+
+    $(document).on('pagebeforeshow', '#index', function(){
+
+    });
+
+
     $(document).ready(function () {
 
         $("#owl-demo").owlCarousel({
